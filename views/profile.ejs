@@ -15,30 +15,10 @@
     </div>
 
     <div class="row">
-
-        <!-- LOCAL INFORMATION -->
-        <!-- <div class="col-sm-6">
-            <div class="well">
-                <h3><span class="fa fa-user"></span> Local</h3>
-
-                <% if (user.local.email) { %>
-                    <p>
-                        <strong>id</strong>: <%= user._id %><br>
-                        <strong>email</strong>: <%= user.local.email %><br>
-                        <strong>password</strong>: <%= user.local.password %>
-                    </p>
-
-                    <a href="/unlink/local" class="btn btn-default">Unlink</a>
-                <% } else { %>
-                    <a href="/connect/local" class="btn btn-default">Connect Local</a>
-                <% } %>
-
-            </div>
-        </div> -->
-
+<!-- 
         <div class="col-sm-6">
         <img src="img/trip savings.png">
-        </div>
+        </div> -->
 
         <div class="col-sm-6">
           <h3> Input the amount of money you've saved for your trip below</h3>
@@ -48,7 +28,8 @@
               <span id="hello"><%= messages[i].name %></span>
               <span id="goodbye"><%= messages[i].date %></span>
               <span id="money"><%= messages[i].amount %></span>
-              <button class="delete">delete</button>
+              <img src="<%= messages[i].image %>">
+              <button class="delete" value="<%=messages[i]._id%>"> delete </button>
             </li>
           <% } %>
           </ul>
